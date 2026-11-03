@@ -8,16 +8,17 @@ while True:
 		my_numbers.append(num)
 		break
 	except ValueError:
-		print("Invalid input! Please enter a valid number.")
+		print("Invalid input! Please enter a valid number")
 
 while True:
 	try:
-		num=int(input("Please Enter a numbers or Enter 0 to exit"))
+		num=int(input("Enter numbers or Enter 0 to exit"))
 		if num==0:
 			break
 		my_numbers.append(num)
 	except ValueError:
 		print("Invalid input! Please enter a valid number.")
+		
 		
 
 max_num=my_numbers[0]
@@ -46,5 +47,6 @@ for i in my_numbers:
 	else:
 		frequency[i]+=1
 
-for i, count in frequency.items():						
-	print(f"{i} appears {count} times")
+search_num=int(input("Enter a number to search for it"))
+count=frequency.get(search_num, 0)
+print(f"{search_num} appears {count} times")
