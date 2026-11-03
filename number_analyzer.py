@@ -39,12 +39,12 @@ print(f"Total Sum     : {total}")
 
 
 print("Frequency: ")
-printed_numbers=[]
+frequency={}
 for i in my_numbers:
-	count=0
-	if i not in printed_numbers:
-		printed_numbers.append(i)
-		for j in my_numbers:
-			if i == j:
-				count+=1
-		print(f"{i} appears {count} times")
+	if i not in frequency:
+		frequency[i] = 1 
+	else:
+		frequency[i]+=1
+
+for i, count in frequency.items():						
+	print(f"{i} appears {count} times")
