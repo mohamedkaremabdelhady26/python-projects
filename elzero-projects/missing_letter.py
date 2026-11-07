@@ -1,6 +1,5 @@
 import string
 
-# Method 1: Using string slicing and standard character lookup
 def find_missing_letter_v1(givenletters):
     alpha = string.ascii_lowercase
     start = alpha.index(givenletters[0])
