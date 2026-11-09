@@ -4,9 +4,14 @@ def remove_char_from(word, c):
 		if i not in [c.lower(), c.upper()]:
 			word_without_char.append(i)
 	
-	result="".join(new_word)
+	return "".join(word_without_char)
+
+
+def remove_char_from(word, c):
 	
-	return result
+	result=filter(lambda x:x not in [c.lower(), c.upper()], word)
+	
+	return "".join(result)
 
 
 def remove_char_from(word, c):
@@ -15,4 +20,4 @@ def remove_char_from(word, c):
 	return result		
 
 
-print(remove_char_from("salah llsaam fdhl", "L"))
+
